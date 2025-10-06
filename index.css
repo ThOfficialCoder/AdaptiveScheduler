@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: lightgray;
+    font-family: Arial, sans-serif;
+}
+
+/* Container holding all tasks */
+#taskList {
+    display: flex;              /* Horizontal layout */
+    flex-direction: row;        /* Row of tasks */
+    gap: 15px;                  /* Space between tasks */
+    padding: 10px;
+    overflow-x: auto;           /* Scroll if tasks exceed width */
+}
+
+/* Each individual task block */
+.task-item {
+    background-color: lightcoral; /* Change based on status if needed */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    min-width: 150px;           /* Each task has own width */
+    display: flex;
+    flex-direction: column;     /* Stack task info inside block */
+    align-items: flex-start;
+    white-space: nowrap;        /* Keep content in one line if needed */
+}
+
+/* Task info text inside block */
+.task-item p {
+    margin: 5px 0;              /* Vertical spacing between info */
+    font-size: 14px;
+}
+
+/* Optional: status-based colors */
+.task-item.done {
+    background-color: #a0e6a0;  /* Green for done */
+}
+
+.task-item.pending {
+    background-color: #a0c4e6;  /* Blue for pending */
+}
+
+.task-item.missed {
+    background-color: #f7b77b;  /* Orange for missed */
+}
